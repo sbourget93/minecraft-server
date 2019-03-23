@@ -1,4 +1,4 @@
-###Prerequisites
+### Prerequisites
 The following will not be created by terraform and must be pre-existing (in `us-east-2` where applicable):
 * AWS credentials exported as environment variables
     ```
@@ -9,6 +9,6 @@ The following will not be created by terraform and must be pre-existing (in `us-
 * SSH key `stephengb.pem`
 * S3 bucket `stephen-minecraft`
 
-###Usage
+### Usage
 To SSH into this instance:
 * `ssh -i ~/.ssh/stephengb.pem ec2-user@`{instance-ip-or-dns}
