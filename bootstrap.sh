@@ -8,9 +8,9 @@ pip install boto3==1.9.121
 cd /home/ec2-user/minecraft/minecraft
 mkdir world
 cd world
-aws s3 cp s3://stephengb-minecraft/backups/latest-backup.zip .
-unzip latest-backup.zip
-rm latest-backup.zip
+aws s3 cp s3://stephengb-minecraft/backups/latest-backup.zip . || true
+unzip latest-backup.zip || true
+rm latest-backup.zip || true
 
 chown -R ec2-user /home/ec2-user/minecraft
 chmod -R g+rwx /home/ec2-user/minecraft
