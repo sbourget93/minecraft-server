@@ -3,6 +3,8 @@
 yum install -y java-1.8.0
 yum remove -y java-1.7.0-openjdk.x86_64
 
+pip install boto3==1.9.121
+
 chown -R ec2-user /home/ec2-user/minecraft
 chmod -R g+rwx /home/ec2-user/minecraft
 chmod -R g+s /home/ec2-user/minecraft
