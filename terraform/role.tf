@@ -24,5 +24,5 @@ EOF
 
 resource "aws_iam_role_policy_attachment" "attach-associate-address-minecraft" {
   role       = "${aws_iam_role.ec2-minecraft-service-role.name}"
-  policy_arn = "${aws_iam_policy.associate-address.arn}"
+  policy_arn = "${aws_iam_policy.minecraft-policy.arn}"
 }
