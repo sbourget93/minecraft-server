@@ -16,7 +16,7 @@ chown -R ec2-user /home/ec2-user/minecraft
 chmod -R g+rwx /home/ec2-user/minecraft
 chmod -R g+s /home/ec2-user/minecraft
 
+crontab /home/ec2-user/minecraft/crontab.config
+
 easy_install supervisor
 /usr/local/bin/supervisord -c /home/ec2-user/minecraft/supervisord.conf
-
-crontab -u ec2-user /home/ec2-user/minecraft/crontab.config
