@@ -18,7 +18,7 @@ resource "aws_iam_policy" "minecraft-policy" {
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::stephengb-minecraft/backups/latest-backup.zip"
+                "arn:aws:s3:::stephengb-minecraft/backups/"
             ]
         }
     ]
