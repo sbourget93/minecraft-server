@@ -37,9 +37,9 @@ if __name__ == '__main__':
 
         latest_backup_key = prefix + 'latest-backup.zip'
         with open('/tmp/server_started_at') as f:
-            server_started_at = f.readline()
+            server_started_at = f.readline().strip()
 
-        persistent_backup_key = 'persistent/%s.zip' % server_started_at
+        persistent_backup_key = 'backups/persistent/%s.zip' % server_started_at
 
         print 'Copying %(file_path)s to %(bucket)s/%(key)s' % {
             'file_path': file_path,
