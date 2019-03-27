@@ -36,6 +36,7 @@ if __name__ == '__main__':
         }
 
         latest_backup_key = prefix + 'latest-backup.zip'
+        persistent_backup_key = 'persistent/%s.zip' % os.environ['SERVER_STARTED_AT']
 
         print 'Copying %(file_path)s to %(bucket)s/%(key)s' % {
             'file_path': file_path,
@@ -44,3 +45,11 @@ if __name__ == '__main__':
         }
         s3 = boto3.resource('s3')
         s3.Object(bucket, latest_backup_key).put(Body=open(file_path, 'rb'))
+
+        print 'Copying %(file_path)s to %(bucket)s/%(key)s' % {
+            'file_path': file_path,
+            'bucket': bucket,
+            'key': persistent_backup_key
+        }
+        s3 = boto3.resource('s3')
+        s3.Object(bucket, persistent_backup_key).put(Body=open(file_path, 'rb'))
