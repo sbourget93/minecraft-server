@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# echo $(date +%Y-%m-%dT%H:%M:%S) > /tmp/server_started_at
+echo $(date +%Y-%m-%dT%H:%M:%S) > /tmp/server_started_at
 
 cd "$(dirname "$0")"
 cd minecraft
