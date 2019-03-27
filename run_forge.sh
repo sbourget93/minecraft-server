@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export SERVER_STARTED_AT = $(date +%Y-%m-%dT%H:%M:%S)
+export SERVER_STARTED_AT=$(date +%Y-%m-%dT%H:%M:%S)
 
 cd "$(dirname "$0")"
 cd minecraft
