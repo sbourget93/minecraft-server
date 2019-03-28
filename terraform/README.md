@@ -10,5 +10,9 @@ The following will not be created by terraform and must be pre-existing (in `us-
 * S3 bucket `stephen-minecraft`
 
 ### Usage
-To SSH into this instance:
-* `ssh -i ~/.ssh/stephengb.pem ec2-user@`{instance-ip-or-dns}
+The terraform files are set up in a way to allow multiple servers to be managed with terraform simultaneously.
+
+I'll add more details later on how to apply/destroy only a single server. These links will be helpful:
+* https://github.com/hashicorp/terraform/issues/12917 
+* https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa
+* https://blog.gruntwork.io/how-to-create-reusable-infrastructure-with-terraform-modules-25526d65f73d
