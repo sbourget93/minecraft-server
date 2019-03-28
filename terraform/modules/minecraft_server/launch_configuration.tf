@@ -1,14 +1,9 @@
 resource "aws_launch_configuration" "minecraft" {
-  name          = "minecraft-launch-configuration"
-  image_id      = "ami-0b59bfac6be064b78"
+  name = "minecraft-launch-configuration-${var.server_name}"
+  image_id = "ami-0b59bfac6be064b78"
   instance_type = "c5.xlarge"
   key_name = "stephengb"
-  security_groups = [
-    "${aws_security_group.https-outbound.id}",
-    "${aws_security_group.http-outbound.id}",
-    "${aws_security_group.minecraft-anywhere.id}",
-    "${aws_security_group.ssh-anywhere.id}"
-  ]
+  security_groups = ["${var.security_group_ids}"]
   spot_price = ".05"
   user_data = <<EOF
     #!/bin/bash

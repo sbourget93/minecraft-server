@@ -1,15 +1,9 @@
-resource "aws_iam_policy" "minecraft-policy" {
-  name        = "minecraft-policy"
+resource "aws_iam_policy" "s3-backups" {
+  name = "minecraft-s3-backups-${var.server_name}"
   policy = <<EOF
 {
     "Version": "2012-10-17",
     "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "ec2:AssociateAddress",
-            "Resource": "*"
-        },
         {
             "Sid": "VisualEditor1",
             "Effect": "Allow",
@@ -18,7 +12,7 @@ resource "aws_iam_policy" "minecraft-policy" {
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::stephengb-minecraft/backups/*"
+                "arn:aws:s3:::stephengb-minecraft/${var.server_name}/backups/*"
             ]
         }
     ]
