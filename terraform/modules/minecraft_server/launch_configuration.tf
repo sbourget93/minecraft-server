@@ -19,7 +19,7 @@ resource "aws_launch_configuration" "minecraft" {
     sudo yum install git -y
 
     git clone https://github.com/sbourget93/minecraft-server.git
-    cd minecraft-server/
+    cd minecraft-server/server/
     chmod +x ./bootstrap.sh
     ./bootstrap.sh ${var.server_name}
   EOF
