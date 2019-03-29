@@ -12,14 +12,16 @@ resource "aws_launch_configuration" "minecraft" {
     INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
     aws ec2 associate-address --instance-id $INSTANCE_ID --public-ip=${aws_eip.minecraft.public_ip} --region us-east-2
 
+    echo ${var.server_name} > /tmp/server_name
+
     cd /home/ec2-user/
     sudo yum update -y
     sudo yum install git -y
 
-    git clone https://github.com/sbourget93/minecraft.git
+    git clone https://github.com/sbourget93/minecraft-server.git
     cd minecraft/
     chmod +x ./bootstrap.sh
-    ./bootstrap.sh
+    ./bootstrap.sh ${var.server_name}
   EOF
   iam_instance_profile = "${aws_iam_instance_profile.ec2-minecraft-instance-profile.name}"
 }

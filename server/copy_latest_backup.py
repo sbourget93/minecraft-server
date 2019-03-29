@@ -7,9 +7,12 @@ if __name__ == '__main__':
 
     most_recent_file = None
 
-    path = '/home/ec2-user/server/server/backups/world'
-    bucket = 'stephengb-server'
-    prefix = 'backups/'
+    with open('/tmp/server_started_at') as f:
+        server_name = f.readline().strip()
+
+    path = '/home/ec2-user/minecraft-server/server/minecraft/backups/world'
+    bucket = 'stephengb-minecraft'
+    prefix = '%s/backups/' % server_name
     backup_format = 'Backup--world--%Y-%m-%d--%H-%M.zip'
 
     for file_name in os.listdir(path):
