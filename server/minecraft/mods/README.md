@@ -35,8 +35,6 @@
 
 `Journey Map`
 
-`LLibrary` - Required for Mowzies Mobs
-
 `Mantle`
 
 `Mcjtylib`
