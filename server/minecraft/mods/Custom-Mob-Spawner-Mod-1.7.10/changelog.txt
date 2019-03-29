@@ -1,0 +1,64 @@
+[3.3.0]
+- Updated for MC 1.7.10
+
+[3.2.0]
+- upped version to release
+
+[3.2.0 dev.R3]
+- Updated to support latest Forge 10.12.1.1112+
+- Fixed possible java.lang.IllegalArgumentException crash during world gen.
+
+[3.2.0 dev.R2]
+- fixed canSpawn command check.
+- added CMS guide to jar. Use a zip utility to extract it.
+
+[3.2.0 dev.R1 hotfix1]
+- fixed canCreatureSpawn block check.
+
+[3.2.0.dev.R1]
+- update to MC 1.7.2
+
+[3.0.0 release]
+- fixed canspawn.
+
+[3.0.0.dev.R2 hotfix1]
+- prevent crash while attempting to register an entity that contains a client class.
+
+[3.0.0.dev.R2]
+- initialize environment settings when worlds load. Fixes mystcraft spawning.
+
+[3.0.0.dev.R1b]
+- fixed biome data being overwritten
+- fixed lowercase biomegroup names in EntityDefaultBiomeGroups.cfg
+
+[3.0.0.dev.R1a]
+-fixed biome types.
+-fixed canspawn not functioning.
+
+[3.0.0.dev.R1]
+-added new World Environment configurations. Defaults are (NORMAL, NETHER, END).
+-added BiomeDictionary support
+-added ability to create custom Entity spawn types. Defaults are (CREATURE, MONSTER, WATERCREATURE, AMBIENT, UNDERGROUND).
+-added canSeeSky(NOT COMPLETE)
+-added spawn block blacklist(NOT COMPLETE)
+-added ability to control lightlevel spawning for each entity.
+-added opaque block entity option(NOT COMPLETE)
+-added blacklist for banning spawn blocks of a certain id-meta(NOT COMPLETE)
+-added default underground entity type. Uses 0-62 spawn height range.
+-added min/max Y control for entities.
+-added new /cms command to control all config options.
+-added '/cms killall force' command which kills all entities, excluding players, in current world
+-added '/cms countentities' command to display sorted list of counts for all types in current world.
+-added '/cms countentities chunk' command which counts all entities in current chunk and displays them in a sorted list.
+-added indepedent environment logging.
+-fixed Structure configs not working properly when adding/removing entities to spawnlists.
+-fixed tamed ocelots despawning when despawner was active.
+-fixed mushrooms not spawning properly.
+-fixed mod configs being generated without having the mod installed.
+-fixed config sub categories appending extra quotes each time it was saved.
+-fixed entity registration occuring again if single player rejoined game.
+-default configs will now be generated using all settings found in vanilla spawnlists.
+-each entity will get a default biome group created with all biomes found from spawnlists.
+-despawner will now be disabled by default and can be reactivated by setting forceDespawns to true.
+-removed all MoCreatures dependent code to allow CMS to run indepdently.
+

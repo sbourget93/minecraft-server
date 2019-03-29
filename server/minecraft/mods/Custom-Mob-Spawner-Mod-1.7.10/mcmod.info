@@ -1,0 +1,24 @@
+[
+{
+  "modid": "CustomSpawner",
+  "name": "DrZhark's CustomSpawner",
+  "description": "Allows mods to take control of spawning of custom mobs",
+  "version": "3.3.0",
+  "mcversion": "1.7.10",
+  "url": "http://www.mocreatures.org",
+  "updateUrl": "",
+  "authors": [
+    "DrZhark",
+	"Bloodshot"
+  ],
+  "credits": "Authored by DrZhark and BloodShot",
+  
+  "screenshots": [
+    "shot1.png",
+    "shot2.png"
+  ],
+  
+  "dependencies": [
+  ]
+}
+]
