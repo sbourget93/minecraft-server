@@ -45,8 +45,6 @@
 
 `Morpheus` - Sleep voting
 
-`Mowzies Mobs` - Adds a few extra mobs
-
 `Mutant Creatures` - Adds stronger enemies
 
 `RF Tools`
