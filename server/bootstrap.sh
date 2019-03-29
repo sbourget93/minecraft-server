@@ -10,9 +10,6 @@ pip install boto3==1.9.121
 cd /home/ec2-user/minecraft-server/server/minecraft
 aws s3 cp s3://stephengb-minecraft/$server_name/backups/latest-backup.zip . || true
 unzip latest-backup.zip || true
-mv world world_temp
-mv world_temp/* .
-rm -r world_temp/
 rm latest-backup.zip
 
 chown -R ec2-user /home/ec2-user/minecraft-server
