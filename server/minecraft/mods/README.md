@@ -7,6 +7,8 @@
 
 `Baubles`
 
+`Blood Arsenal`
+
 `Blood Magic`
 
 `CoFC Core`
@@ -15,13 +17,29 @@
 
 `DrZharks MoCreatures` - Adds cool creatures
 
+`Enchanting Plus`
+
 `Ender Core`
 
 `Ender IO`
 
+`Hats`
+
+`IchunUtil`
+
 `Inventory Tweaks` - Nice-to-have quality of life improvements for inventory management
 
+`Iron Backpacks`
+
+`Iron Chest`
+
+`Journey Map`
+
 `LLibrary` - Required for Mowzies Mobs
+
+`Mantle`
+
+`Mcjtylib`
 
 `Millenaire` - Makes villagers cooler
 
@@ -31,6 +49,16 @@
 
 `Mutant Creatures` - Adds stronger enemies
 
+`RF Tools`
+
 `So Many Enchantments` - Adds more enchantments
 
+`Storage Drawers`
+
 `Tainted Magic`
+
+`Tinkers Construct`
+
+`Waila`
+
+`Wawla`
