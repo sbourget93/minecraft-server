@@ -10,7 +10,7 @@ if __name__ == '__main__':
     with open('/tmp/server_name') as f:
         server_name = f.readline().strip()
 
-    path = '/home/ec2-user/minecraft-server/server/minecraft/backups/world'
+    path = '/home/ec2-user/minecraft-server/minecraft/backups/world'
     bucket = 'stephengb-minecraft'
     prefix = '%s/backups/' % server_name
     backup_format = 'Backup-world-%Y-%m-%d--%H-%M.zip'
