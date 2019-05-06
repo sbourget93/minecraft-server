@@ -16,7 +16,7 @@ chown -R ec2-user /home/ec2-user/minecraft-server
 chmod -R g+rwx /home/ec2-user/minecraft-server
 chmod -R g+s /home/ec2-user/minecraft-server
 
-echo '30 * * * * python /home/ec2-user/minecraft-server/copy_latest_backup.py'  >> /var/spool/cron/ec2-user
+echo '30 * * * * python /home/ec2-user/minecraft-server/backup_to_s3.py'  >> /var/spool/cron/ec2-user
 
 easy_install supervisor
 /usr/local/bin/supervisord -c /home/ec2-user/minecraft-server/supervisord.conf
