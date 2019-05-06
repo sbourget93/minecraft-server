@@ -1,3 +1,5 @@
+import os
+
 import boto3
 import subprocess
 
@@ -36,3 +38,5 @@ if __name__ == '__main__':
     }
     s3 = boto3.resource('s3')
     s3.Object(bucket, persistent_backup_key).put(Body=open(backup_path, 'rb'))
+
+    os.remove(backup_path)
