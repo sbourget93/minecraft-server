@@ -1,37 +1,38 @@
 import boto3
+import subprocess
+
 
 if __name__ == '__main__':
+
+    bucket = 'stephengb-minecraft'
 
     with open('/tmp/server_name') as f:
         server_name = f.readline().strip()
 
-    path = '/home/ec2-user/minecraft-server/minecraft/backups/world'
-    bucket = 'stephengb-minecraft'
-    prefix = '%s/backups/' % server_name
-    backup_format = 'Backup-world-%Y-%m-%d--%H-%M.zip'
+    with open('/tmp/server_started_at') as f:
+        server_started_at = f.readline().strip()
 
-    if most_recent_file is not None:
+    world_path = '/home/ec2-user/minecraft-server/minecraft/world/'
+    backup_path = '/tmp/backup.zip'
 
-        file_path = most_recent_file['file_path']
+    backup_s3_prefix = '%s/backups' % server_name
+    latest_backup_key = '%s/latest-backup.zip' % backup_s3_prefix
+    persistent_backup_key = '%s/persistent/%s.zip' % (backup_s3_prefix, server_started_at)
 
-        latest_backup_key = prefix + 'latest-backup.zip'
-        with open('/tmp/server_started_at') as f:
-            server_started_at = f.readline().strip()
+    subprocess.call(['zip', '-r', backup_path, '.'], cwd=world_path)
 
-        persistent_backup_key = prefix + 'persistent/%s.zip' % server_started_at
+    print 'Copying %(file_path)s to %(bucket)s/%(key)s' % {
+        'file_path': backup_path,
+        'bucket': bucket,
+        'key': latest_backup_key
+    }
+    s3 = boto3.resource('s3')
+    s3.Object(bucket, latest_backup_key).put(Body=open(backup_path, 'rb'))
 
-        print 'Copying %(file_path)s to %(bucket)s/%(key)s' % {
-            'file_path': file_path,
-            'bucket': bucket,
-            'key': latest_backup_key
-        }
-        s3 = boto3.resource('s3')
-        s3.Object(bucket, latest_backup_key).put(Body=open(file_path, 'rb'))
-
-        print 'Copying %(file_path)s to %(bucket)s/%(key)s' % {
-            'file_path': file_path,
-            'bucket': bucket,
-            'key': persistent_backup_key
-        }
-        s3 = boto3.resource('s3')
-        s3.Object(bucket, persistent_backup_key).put(Body=open(file_path, 'rb'))
+    print 'Copying %(file_path)s to %(bucket)s/%(key)s' % {
+        'file_path': backup_path,
+        'bucket': bucket,
+        'key': persistent_backup_key
+    }
+    s3 = boto3.resource('s3')
+    s3.Object(bucket, persistent_backup_key).put(Body=open(backup_path, 'rb'))

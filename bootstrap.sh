@@ -8,6 +8,8 @@ yum remove -y java-1.7.0-openjdk.x86_64
 pip install boto3==1.9.121
 
 cd /home/ec2-user/minecraft-server/minecraft
+mkdir world
+cd world
 aws s3 cp s3://stephengb-minecraft/$server_name/backups/latest-backup.zip . || true
 unzip latest-backup.zip || true
 rm latest-backup.zip
