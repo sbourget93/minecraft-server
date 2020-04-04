@@ -12,11 +12,13 @@ aws s3 cp s3://stephengb-minecraft/$server_name/backups/latest-backup.zip . || t
 unzip latest-backup.zip || true
 rm latest-backup.zip
 
+mkdir /home/ec2-user/minecraft-server/backups
+
 chown -R ec2-user /home/ec2-user/minecraft-server
 chmod -R g+rwx /home/ec2-user/minecraft-server
 chmod -R g+s /home/ec2-user/minecraft-server
 
-echo '30 * * * * python /home/ec2-user/minecraft-server/copy_latest_backup.py'  >> /var/spool/cron/ec2-user
+echo '30 * * * * /home/ec2-user/minecraft-server/backup_world.sh && python /home/ec2-user/minecraft-server/copy_latest_backup.py'  >> /var/spool/cron/ec2-user
 
 easy_install supervisor
 /usr/local/bin/supervisord -c /home/ec2-user/minecraft-server/supervisord.conf
