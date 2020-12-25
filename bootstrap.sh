@@ -14,6 +14,10 @@ rm latest-backup.zip
 
 mkdir /home/ec2-user/minecraft-server/backups
 
+mv /home/ec2-user/minecraft-server/forge-1.12.2-14.23.5.2854-installer.jar /home/ec2-user/minecraft-server/minecraft/forge-1.12.2-14.23.5.2854-installer.jar
+cd /home/ec2-user/minecraft-server/minecraft
+java -jar forge-1.12.2-14.23.5.2854-installer.jar --installServer
+
 chown -R ec2-user /home/ec2-user/minecraft-server
 chmod -R g+rwx /home/ec2-user/minecraft-server
 chmod -R g+s /home/ec2-user/minecraft-server
