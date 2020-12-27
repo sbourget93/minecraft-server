@@ -7,7 +7,7 @@
   "entityClass": "com.lycanitesmobs.core.entity.creature.EntityGeonach",
   "modelClass": "com.lycanitesmobs.client.model.creature.ModelGeonach",
   "loadDefault": true,
-  "enabled": true,
+  "enabled": false,
   "spawning": {
     "enabled": true,
     "spawners": [],

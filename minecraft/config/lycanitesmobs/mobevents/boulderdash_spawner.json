@@ -40,7 +40,7 @@
   "mobSpawns": [
     {
       "mobId": "lycanitesmobs:geonach",
-      "weight": 0
+      "weight": 8
     },
     {
       "mobId": "lycanitesmobs:vapula",
