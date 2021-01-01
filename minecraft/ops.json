@@ -1,7 +1,13 @@
 [
   {
-    "uuid": "00be349d-f316-4ae4-b5fa-54fd181500d2",
-    "name": "Faerious",
+    "uuid": "760c79bc-54f7-4f11-8288-c46e08dced8e",
+    "name": "BogggyB",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "eef30069-cc66-447e-b115-14765aa8b1b9",
+    "name": "sbourget93",
     "level": 4,
     "bypassesPlayerLimit": false
   }
