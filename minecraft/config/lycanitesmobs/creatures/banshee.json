@@ -7,7 +7,7 @@
   "entityClass": "com.lycanitesmobs.core.entity.creature.EntityBanshee",
   "modelClass": "com.lycanitesmobs.client.model.creature.ModelBanshee",
   "loadDefault": true,
-  "enabled": true,
+  "enabled": false,
   "spawning": {
     "enabled": false,
     "spawners": [
