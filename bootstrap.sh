@@ -18,7 +18,8 @@ pip3 install boto3==1.20.25
 chown -R ec2-user /home/ec2-user/minecraft-server
 chmod -R 700 /home/ec2-user/minecraft-server
 
-echo '*/5 * * * * /home/ec2-user/minecraft-server/backup_world.sh' >> /var/spool/cron/ec2-user
+echo '*/5 * * * * /home/ec2-user/minecraft-server/backup_world.sh && python3 /home/ec2-user/minecraft-server/upload_backup.py latest' >> /var/spool/cron/ec2-user
+echo '0 * * * * python3 /home/ec2-user/minecraft-server/upload_backup.py persistent' >> /var/spool/cron/ec2-user
 
 easy_install supervisor
 # supervisor runs 'run_server.sh' as ec2-user
