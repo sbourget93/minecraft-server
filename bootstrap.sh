@@ -15,9 +15,9 @@ pip3 install boto3==1.20.25
 #rm latest-backup.zip
 
 chown -R ec2-user /home/ec2-user/minecraft-server
-chmod -R g+rwx /home/ec2-user/minecraft-server
-chmod -R g+s /home/ec2-user/minecraft-server
-chmod -R 777 /home/ec2-user/minecraft-server
+#chmod -R g+rwx /home/ec2-user/minecraft-server
+#chmod -R g+s /home/ec2-user/minecraft-server
+#chmod -R 777 /home/ec2-user/minecraft-server
 
 
 echo '*/5 * * * * /home/ec2-user/minecraft-server/backup_world.sh' >> /var/spool/cron/ec2-user
