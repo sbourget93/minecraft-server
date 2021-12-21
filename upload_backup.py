@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     most_recent_file = None
 
-    with open('/tmp/server_name') as f:
+    with open('/usr/etc/server_name') as f:
         server_name = f.readline().strip()
 
     path = '/home/ec2-user/minecraft-server/backups'
