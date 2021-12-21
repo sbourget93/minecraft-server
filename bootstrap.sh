@@ -2,7 +2,7 @@ server_name=$1
 
 # yum is updated in user-data script
 
-amazon-linux-extras install java-openjdk11
+#amazon-linux-extras install java-openjdk11
 
 #pip install boto3==1.9.121
 
