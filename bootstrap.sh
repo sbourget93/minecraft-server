@@ -1,5 +1,7 @@
 server_name=$1
 
+mkdir /home/ec2-user/minecraft-server/backups
+
 # install java 17 which is needed for Minecraft 1.18
 wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm
 rpm -Uvh jdk-17_linux-x64_bin.rpm
@@ -16,7 +18,7 @@ chown -R ec2-user /home/ec2-user/minecraft-server
 chmod -R g+rwx /home/ec2-user/minecraft-server
 chmod -R g+s /home/ec2-user/minecraft-server
 
-#echo '30 * * * * python3 /home/ec2-user/minecraft-server/copy_latest_backup.py'  >> /var/spool/cron/ec2-user
+echo '*/5 * * * * /home/ec2-user/minecraft-server/backup_world.sh' >> /var/spool/cron/ec2-user
 
 easy_install supervisor
 /usr/bin/supervisord -c /home/ec2-user/minecraft-server/supervisord.conf
