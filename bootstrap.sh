@@ -9,10 +9,10 @@ rm jdk-17_linux-x64_bin.rpm
 
 pip3 install boto3==1.20.25
 
-#cd /home/ec2-user/minecraft-server/minecraft
-#aws s3 cp s3://stephengb-minecraft/$server_name/backups/latest-backup.zip . || true
-#unzip latest-backup.zip || true
-#rm latest-backup.zip
+cd /home/ec2-user/minecraft-server/minecraft
+aws s3 cp s3://stephengb-minecraft/$server_name/backups/latest-backup.zip . || true
+unzip latest-backup.zip || true
+rm latest-backup.zip
 
 # make ec2-user owner of everything in the minecraft-server directory
 chown -R ec2-user /home/ec2-user/minecraft-server
