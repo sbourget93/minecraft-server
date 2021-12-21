@@ -16,8 +16,9 @@ pip3 install boto3==1.20.25
 
 chown -R ec2-user /home/ec2-user/minecraft-server
 #chmod -R g+rwx /home/ec2-user/minecraft-server
-#chmod -R g+s /home/ec2-user/minecraft-server
-#chmod -R 777 /home/ec2-user/minecraft-server
+
+# everything created in 'minecraft-server' will have the same owner as 'minecraft-server'
+chmod -R g+s /home/ec2-user/minecraft-server
 
 
 echo '*/5 * * * * /home/ec2-user/minecraft-server/backup_world.sh' >> /var/spool/cron/ec2-user
