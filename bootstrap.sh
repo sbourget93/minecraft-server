@@ -2,7 +2,8 @@ server_name=$1
 
 # yum is updated in user-data script
 
-#amazon-linux-extras install java-openjdk11
+wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm
+rpm -Uvh jdk-17_linux-x64_bin.rpm
 
 #pip install boto3==1.9.121
 
