@@ -1,7 +1,5 @@
 #!/bin/bash
 
-SERVER_RAM=`cat /usr/etc/server_ram`
-
 #!/usr/bin/env sh
 # Forge requires a configured set of both JVM and program arguments.
 # Add custom JVM arguments to the user_jvm_args.txt
