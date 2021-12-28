@@ -14,6 +14,10 @@ aws s3 cp s3://stephengb-minecraft/$server_name/backups/latest-backup.zip . || t
 unzip latest-backup.zip || true
 rm latest-backup.zip
 
+mv /home/ec2-user/minecraft-server/forge-1.18.1-39.0.9-installer.jar /home/ec2-user/minecraft-server/minecraft/forge-1.18.1-39.0.9-installer.jar
+cd /home/ec2-user/minecraft-server/minecraft
+java -jar forge-1.18.1-39.0.9-installer.jar --installServer
+
 # make ec2-user owner of everything in the minecraft-server directory
 chown -R ec2-user /home/ec2-user/minecraft-server
 chmod -R 700 /home/ec2-user/minecraft-server
@@ -22,5 +26,5 @@ echo '*/5 * * * * /home/ec2-user/minecraft-server/backup_world.sh && python3 /ho
 echo '0 * * * * python3 /home/ec2-user/minecraft-server/upload_backup.py persistent' >> /var/spool/cron/ec2-user
 
 easy_install supervisor
-# supervisor runs 'run_server.sh' as ec2-user
+# supervisor runs 'run_forge.sh' as ec2-user
 /usr/bin/supervisord -c /home/ec2-user/minecraft-server/supervisord.conf
