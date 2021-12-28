@@ -19,8 +19,7 @@ mv /home/ec2-user/minecraft-server/forge-1.18.1-39.0.9-installer.jar /home/ec2-u
 cd /home/ec2-user/minecraft-server/minecraft
 java -jar forge-1.18.1-39.0.9-installer.jar --installServer
 
-echo '-Xmx${server_ram}G' >> /home/ec2-user/minecraft-server/minecraft/user_jvm_args.txt
-echo '-Xms${server_ram}G' >> /home/ec2-user/minecraft-server/minecraft/user_jvm_args.txt
+echo "\n-Xmx${server_ram}G\n-Xms${server_ram}G" >> /home/ec2-user/minecraft-server/minecraft/user_jvm_args.txt
 
 # make ec2-user owner of everything in the minecraft-server directory
 chown -R ec2-user /home/ec2-user/minecraft-server
