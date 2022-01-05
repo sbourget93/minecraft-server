@@ -3,10 +3,10 @@ server_ram=`cat /usr/etc/server_ram`
 
 mkdir /home/ec2-user/minecraft-server/backups
 
-# install java 17 which is needed for Minecraft 1.18
-wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm
-rpm -Uvh jdk-17_linux-x64_bin.rpm
-rm jdk-17_linux-x64_bin.rpm
+# install java 8
+#wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm
+#rpm -Uvh jdk-17_linux-x64_bin.rpm
+#rm jdk-17_linux-x64_bin.rpm
 
 pip3 install boto3==1.20.25
 
