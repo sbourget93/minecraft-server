@@ -3,7 +3,7 @@ server_ram=`cat /usr/etc/server_ram`
 
 mkdir /home/ec2-user/minecraft-server/backups
 
-# install java 8
+# install java 11
 amazon-linux-extras install java-openjdk11
 
 pip3 install boto3==1.20.25
