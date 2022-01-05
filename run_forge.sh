@@ -1,9 +1,4 @@
 #!/bin/bash
 
-#!/usr/bin/env sh
-# Forge requires a configured set of both JVM and program arguments.
-# Add custom JVM arguments to the user_jvm_args.txt
-# Add custom program arguments {such as nogui} to this file in the next line before the "$@" or
-#  pass them to this script directly
 cd /home/ec2-user/minecraft-server/minecraft
-java @user_jvm_args.txt @libraries/net/minecraftforge/forge/1.18.1-39.0.9/unix_args.txt "$@"
+java -Xmx${SERVER_RAM}G -Xms${SERVER_RAM}G -jar forge-1.16.5-36.2.20.jar nogui -Dfml.queryResult=confirm
