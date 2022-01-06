@@ -1,5 +1,8 @@
 ## Useful commands 
 
+### To connect
+ssh -i C:\Users\tbour\OneDrive\Desktop\tj.pem ec2-user@1.16.5-forge.stephengb.com
+
 ### To switch to root user (only use this user when required)
 ```
 sudo su root
