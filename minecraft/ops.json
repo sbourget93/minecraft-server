@@ -1,1 +1,8 @@
-["MrsTimbles"]
+[
+	{     
+		"uuid": "e87506fb-beba-4928-b3e4-bd33dea85bb5",     
+		"name": "MrsTimbles",     
+		"level": 4,     
+		"bypassesPlayerLimit": false   
+	} 
+]

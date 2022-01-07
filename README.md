@@ -1,7 +1,9 @@
 ## Useful commands 
 
 ### To connect
+```
 ssh -i C:\Users\tbour\OneDrive\Desktop\tj.pem ec2-user@1.16.5-forge.stephengb.com
+```
 
 ### To switch to root user (only use this user when required)
 ```
@@ -38,7 +40,7 @@ kill pid_you_copied
 ### To generate a new world
 ```
 # stop the server
-rm -r ~/minecraft-server/minecraft/world/
+rm -r /home/ec2-user/minecraft-server/minecraft/world/
 # start the server
 ```
 
