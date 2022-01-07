@@ -160,7 +160,7 @@
 		upgradeSlotCount = 2
 		#Number of inventory slots in the backpack
 		#Range: 1 ~ 144
-		inventorySlotCount = 15
+		inventorySlotCount = 12
 
 	#Advanced Feeding Upgrade Settings
 	[common.advancedFeedingUpgrade]
