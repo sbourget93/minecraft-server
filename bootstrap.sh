@@ -13,6 +13,10 @@ aws s3 cp s3://stephengb-minecraft/$server_name/backups/latest-backup.zip . || t
 unzip latest-backup.zip || true
 rm latest-backup.zip
 
+# copy hats-server config to the correct location. This will overwrite the world backup one
+mkdir -p /home/ec2-user/minecraft-server/minecraft/world/serverconfig
+mv -f /home/ec2-user/minecraft-server/hats-server.toml /home/ec2-user/minecraft-server/minecraft/world/serverconfig/hats-server.toml
+
 mv /home/ec2-user/minecraft-server/forge-1.16.5-36.2.20-installer.jar /home/ec2-user/minecraft-server/minecraft/forge-1.16.5-36.2.20-installer.jar
 cd /home/ec2-user/minecraft-server/minecraft
 java -jar forge-1.16.5-36.2.20-installer.jar --installServer
