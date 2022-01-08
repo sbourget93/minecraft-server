@@ -52,7 +52,7 @@
 		upgradeSlotCount = 5
 		#Number of inventory slots in the backpack
 		#Range: 1 ~ 144
-		inventorySlotCount = 27
+		inventorySlotCount = 18
 
 	#Filter Upgrade Settings
 	[common.filterUpgrade]
@@ -151,7 +151,7 @@
 		upgradeSlotCount = 3
 		#Number of inventory slots in the backpack
 		#Range: 1 ~ 144
-		inventorySlotCount = 18
+		inventorySlotCount = 15
 
 	#Iron Backpack Settings
 	[common.ironBackpack]
