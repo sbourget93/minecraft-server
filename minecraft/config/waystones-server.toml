@@ -11,7 +11,7 @@
 	#These options apply to the optional Waystones button displayed in the inventory.
 	[server.inventoryButton]
 		#Set to 'NONE' for no inventory button. Set to 'NEAREST' for an inventory button that teleports to the nearest waystone. Set to 'ANY' for an inventory button that opens the waystone selection menu. Set to a waystone name for an inventory button that teleports to a specifically named waystone.
-		inventoryButton = "NONE"
+		inventoryButton = "ANY"
 		#The multiplier applied to the base xp cost when teleporting via the inventory button.
 		#Range: 0.0 ~ Infinity
 		inventoryButtonXpCostMultiplier = 0.0
